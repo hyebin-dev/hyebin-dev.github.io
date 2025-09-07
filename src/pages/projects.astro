@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+const projects = [
+  { name: "프로젝트 A", desc: "한 줄 설명(역할/성과)", stack: ["React","Node","Postgres"], repo: "https://github.com/hyebin-dev", demo: "" },
+  { name: "프로젝트 B", desc: "한 줄 설명(기술 포인트)", stack: ["Next.js","Prisma","Vercel"], repo: "https://github.com/hyebin-dev", demo: "" }
+];
+---
+<Layout title="Projects">
+  <h1>Projects</h1>
+  <ul>
+    {projects.map(p => (
+      <li>
+        <h2>{p.name}</h2>
+        <p>{p.desc}</p>
+        <p class="muted">{p.stack.join(" · ")}</p>
+        <p>
+          <a href={p.repo}>GitHub</a>
+          {p.demo ? <> | <a href={p.demo}>Demo</a></> : ""}
+        </p>
+      </li>
+    ))}
+  </ul>
+</Layout>
