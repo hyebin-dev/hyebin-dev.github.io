@@ -1,23 +1,54 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro';
+
 const projects = [
-  { name: "프로젝트 A", desc: "한 줄 설명(역할/성과)", stack: ["React","Node","Postgres"], repo: "https://github.com/hyebin-dev", demo: "" },
-  { name: "프로젝트 B", desc: "한 줄 설명(기술 포인트)", stack: ["Next.js","Prisma","Vercel"], repo: "https://github.com/hyebin-dev", demo: "" }
+  {
+    name: 'hyebin-dev.github.io',
+    desc: 'Astro 기반 개인 블로그 (GitHub Actions → Pages 배포)',
+    links: [
+      { href: 'https://hyebin-dev.github.io', label: 'Live' },
+      { href: 'https://github.com/hyebin-dev/hyebin-dev.github.io', label: 'Repo' },
+    ],
+    tags: ['Astro', 'GitHub Pages', 'Actions'],
+  },
+  {
+    name: 'java-practice',
+    desc: '주차별 Java 문제풀이 / CI 컴파일 체크',
+    links: [
+      { href: 'https://github.com/hyebin-dev/java-practice', label: 'Repo' },
+      { href: 'https://github.com/hyebin-dev/java-practice/tree/main/week01', label: 'Week01' },
+    ],
+    tags: ['Java', 'CI', 'Algorithms'],
+  },
 ];
 ---
-<Layout title="Projects">
+
+<Layout title="Projects" description="블로그 & Java 연습 저장소">
   <h1>Projects</h1>
-  <ul>
-    {projects.map(p => (
-      <li>
+  <div class="grid">
+    {projects.map((p) => (
+      <article class="card">
         <h2>{p.name}</h2>
-        <p>{p.desc}</p>
-        <p class="muted">{p.stack.join(" · ")}</p>
-        <p>
-          <a href={p.repo}>GitHub</a>
-          {p.demo ? <> | <a href={p.demo}>Demo</a></> : ""}
-        </p>
-      </li>
+        <p class="muted">{p.desc}</p>
+        <div class="links">
+          {p.links.map((l) => (
+            <a href={l.href} target="_blank" rel="noopener">{l.label}</a>
+          ))}
+        </div>
+        <ul class="tags">
+          {p.tags.map((t) => <li>{t}</li>)}
+        </ul>
+      </article>
     ))}
-  </ul>
+  </div>
+
+  <style>
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:12px}
+    .card{border:1px solid #eee;border-radius:16px;padding:18px}
+    .muted{color:#6b7280;margin:.25rem 0 .5rem}
+    .links a{margin-right:12px}
+    .tags{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:.75rem 0 0}
+    .tags li{font-size:.85rem;background:#f3f4f6;border-radius:999px;padding:4px 10px}
+  </style>
 </Layout>
+
