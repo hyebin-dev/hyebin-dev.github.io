@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/Layout.astro
-title: "Java Week01 회고 — 오목·달팽이·시뮬레이션"
+title: "Java Week01 피드백 — 오목·달팽이·시뮬레이션"
 tags: [Java, StudyLog]
 description: "정확히 5목 판정, 달팽이 2가지 패턴, Game of Life/Matrix 복습"
 ---
