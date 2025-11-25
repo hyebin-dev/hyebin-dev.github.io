@@ -1,0 +1,158 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="java-practice 공부 루틴 — hyebin-dev">
+  <article class="article">
+    <header class="article-header">
+      <p class="article-tag">공부 정리</p>
+      <h1>java-practice 레포로 유지하는 Java 감각</h1>
+      <p class="article-sub">
+        주차별·난이도별로 문제를 풀면서 Java 문법과 자료구조 감각을 유지하기 위해
+        어떻게 레포를 설계했는지 정리했습니다.
+      </p>
+      <div class="article-meta">
+        <span>Stack · Java, 자료구조, 알고리즘</span>
+        <span>
+          Repo ·
+          <a
+            href="https://github.com/hyebin-dev/java-practice"
+            target="_blank"
+            rel="noreferrer"
+            >java-practice</a
+          >
+        </span>
+      </div>
+    </header>
+
+    <section>
+      <h2>1. 목표: “테스트 대비”가 아니라 “감각 유지”</h2>
+      <p>
+        이 레포의 목표는 단기간 코딩테스트 대비가 아니라
+        <strong>Java와 기본 알고리즘에 계속 손이 가게 만드는 것</strong>입니다.
+      </p>
+      <p>
+        그래서 난이도를 무리하게 끌어올리기보다,
+        기초·중급·심화 문제를 골고루 섞어서 꾸준히 반복하는 식으로 구성했습니다.
+      </p>
+    </section>
+
+    <section>
+      <h2>2. Week / 난이도 폴더 구조</h2>
+      <p>폴더는 크게 주차와 난이도로 나눴습니다.</p>
+      <ul>
+        <li>week01/basic, intermediate, advanced</li>
+        <li>week02/basic, intermediate, advanced</li>
+        <li>week03/basic …</li>
+      </ul>
+      <p>
+        이렇게 나누어 두면 나중에 “Week02 중급 문제만 다시 보고 싶다”처럼
+        원하는 영역만 골라서 복습하기 편합니다.
+      </p>
+    </section>
+
+    <section>
+      <h2>3. 문제 1개 = 커밋 1개</h2>
+      <p>
+        커밋 규칙은 <strong>문제 1개당 커밋 1개</strong>입니다.
+        커밋 메시지는
+        <code>feat(week02/basic): add ReverseString.java</code> 처럼
+        어느 주차/난이도에서 어떤 파일이 추가·수정됐는지 바로 알 수 있게 작성합니다.
+      </p>
+      <p>
+        이렇게 하면 깃 로그를 보는 것만으로도 최근에 어떤 유형을 풀었는지
+        빠르게 복기할 수 있습니다.
+      </p>
+    </section>
+
+    <section>
+      <h2>4. 실행 방법은 단순하게</h2>
+      <p>
+        각 문제는 <strong>단일 Java 파일</strong>로 작성하고,
+        IDE에서 바로 실행하거나, 필요하면 콘솔에서
+        <code>javac 파일명.java</code>, <code>java 파일명</code>만으로
+        실행할 수 있게 유지하고 있습니다.
+      </p>
+      <p>
+        별도 빌드 스크립트를 만들지 않은 대신,
+        “어디서든 바로 열어 실행할 수 있다”는 점을 더 중요하게 두었습니다.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. 앞으로 채우고 싶은 부분</h2>
+      <p>
+        아직 Week03 이후는 비어있는 부분이 많습니다.
+        향후에는 자료구조별로 묶인 문제 모음과
+        실전 코딩테스트 난이도의 문제도 조금씩 추가해 나갈 계획입니다.
+      </p>
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .article {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .article-header {
+    margin-bottom: 24px;
+  }
+
+  .article-tag {
+    display: inline-flex;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    font-size: 11px;
+    color: #1d4ed8;
+  }
+
+  .article-header h1 {
+    margin: 10px 0 8px;
+    font-size: 22px;
+  }
+
+  .article-sub {
+    margin: 0 0 10px;
+    color: #4b5563;
+  }
+
+  .article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 12px;
+    color: #6b7280;
+  }
+
+  section {
+    margin-top: 22px;
+  }
+
+  section h2 {
+    margin: 0 0 6px;
+    font-size: 18px;
+  }
+
+  section p {
+    margin: 4px 0;
+  }
+
+  ul {
+    margin: 4px 0 4px 18px;
+  }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
+    font-size: 12px;
+    background: #f3f4f6;
+    padding: 2px 4px;
+    border-radius: 4px;
+  }
+</style>

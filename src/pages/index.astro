@@ -5,58 +5,56 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="hyebin-dev — Portfolio & Blog">
   <section class="hero">
     <div class="hero-main">
-      <p class="hero-pill">꾸준히 쌓아가는 성장 로그 ✿</p>
+      <p class="hero-pill">Java & Web을 꾸준히 쌓아가는 성장 로그 ✿</p>
 
       <h1 class="hero-title">
-        안녕하세요, <span>hyebin-dev</span> 입니다.
+        안녕하세요, <span>hyebin-dev</span> (김혜빈) 입니다.
         <br />
-        작은 실습부터 서비스형 프로젝트까지,
-        <br />
-        차분하게 꾸준히 만들어 가고 있어요.
+        콘솔 게임부터 웹 서비스까지 차분하게 만들어 가고 있어요.
       </h1>
 
       <p class="hero-sub">
-        Java & Spring 기반 백엔드와 React, Astro로 웹 프론트까지 함께 다루고 있습니다.
-        <br />
-        학교·팀프로젝트·사이드프로젝트를 하나의 포트폴리오로 정리하고 있어요.
+        Java를 중심으로 HTML/CSS/JavaScript, MySQL, Astro, Next.js(라우팅·백엔드 연동 기초)를 공부하며
+        웹 백엔드 개발자를 목표로 하고 있습니다.
+        학교/팀프로젝트와 사이드 프로젝트를 하나의 포트폴리오로 정리하고 있어요.
       </p>
 
       <div class="hero-actions">
         <a href="/projects" class="btn-primary">대표 Projects 보러가기</a>
-        <a href="/posts" class="btn-soft">학습/회고 글 보기</a>
+        <a href="/posts" class="btn-ghost">학습/회고 글 보기</a>
       </div>
 
       <dl class="hero-meta">
         <div>
           <dt>주요 스택</dt>
-          <dd>Java · Spring · MySQL · React · Astro</dd>
+          <dd>Java · HTML/CSS · JavaScript · MySQL · Astro · Next.js(기초)</dd>
         </div>
         <div>
           <dt>관심 분야</dt>
-          <dd>웹 백엔드, 서비스 설계, 포트폴리오 프로젝트</dd>
+          <dd>웹 백엔드, 서비스 설계, 포트폴리오용 프로젝트</dd>
         </div>
       </dl>
     </div>
 
     <aside class="hero-side">
-      <div class="side-badge">
-        <span class="badge-dot" />
-        <span>Now Building</span>
+      <div class="side-header">
+        <span class="side-dot" />
+        <span class="side-label">Now Building</span>
       </div>
-
       <ul class="side-list">
         <li>
-          <h3>Netflix 스타일 OTT 포트폴리오</h3>
+          <h3>Tap Run 리팩터링 & 테스트</h3>
           <p>
-            구독·결제·시청 이력·리뷰를 포함한 웹 서비스를
-            Spring Boot + React + MySQL로 구현하며 설계력을 다듬는 중입니다.
+            Java 콘솔 게임 Tap Run의 모드 구조를 정리하고,
+            Quiet Gap·랭킹 로직에 테스트 코드를 붙이는 작업을 진행 중입니다.
           </p>
         </li>
         <li>
-          <h3>Tap Run 콘솔 게임 고도화</h3>
+          <h3>포트폴리오용 OTT/웹 서비스 기획</h3>
           <p>
-            다양한 모드와 랭킹 시스템이 있는 Java 콘솔 게임으로,
-            객체지향 구조와 확장성을 중심으로 리팩터링하고 있습니다.
+            구독·결제·시청 이력 같은 기능을 가진 OTT 스타일 웹 서비스를
+            Java & Spring·React/Next.js 조합으로 구현하기 위해
+            도메인과 데이터 모델을 설계하고 있습니다.
           </p>
         </li>
       </ul>
@@ -74,45 +72,46 @@ import Layout from "../layouts/Layout.astro";
         <div class="card-tag tag-purple">Java 콘솔 게임</div>
         <h3 class="card-title">Tap Run</h3>
         <p class="card-body">
-          다양한 게임 모드와 파일 기반 랭킹 시스템이 있는 콘솔 러닝 게임입니다.
-          모드 분리와 확장 가능한 구조를 목표로 설계했습니다.
+          Enter 키 입력 타이밍과 속도로 승부하는 콘솔 러닝 게임입니다.
+          Quiet Gap 치트 방지와 정밀 타이머, 랭킹 시스템을 직접 설계하면서
+          객체지향 구조를 연습했습니다.
         </p>
         <ul class="card-meta">
           <li>Java 11</li>
           <li>OOP</li>
           <li>파일 I/O</li>
         </ul>
-        <a href="/posts/taprun" class="card-link">프로젝트 정리 보러가기 →</a>
+        <a href="/posts/taprun-retro" class="card-link">프로젝트 정리 보러가기 →</a>
       </article>
 
       <article class="card">
         <div class="card-tag tag-pink">웹 서비스 · 팀 프로젝트</div>
-        <h3 class="card-title">부동산 매물 웹사이트</h3>
+        <h3 class="card-title">Naebang Real Estate</h3>
         <p class="card-body">
-          지역/조건별 매물 검색, 즐겨찾기, 정책·꿀팁 콘텐츠를 제공하는 팀 프로젝트입니다.
-          맡은 기능을 설계부터 구현까지 직접 담당했습니다.
+          카카오 지도를 기반으로 매물을 탐색하고, 찜·시장동향·정책/꿀팁 콘텐츠를 제공하는
+          부동산 웹 서비스입니다. 실제 서비스 흐름을 기준으로 화면과 기능을 설계했습니다.
         </p>
         <ul class="card-meta">
           <li>HTML/CSS/JS</li>
-          <li>REST 흐름</li>
-          <li>협업</li>
+          <li>카카오지도 API</li>
+          <li>팀 협업</li>
         </ul>
         <a href="/projects" class="card-link">담당 역할 자세히 보기 →</a>
       </article>
 
       <article class="card">
-        <div class="card-tag tag-mint">포트폴리오</div>
-        <h3 class="card-title">GitHub Pages 블로그</h3>
+        <div class="card-tag tag-blue">스터디 레포</div>
+        <h3 class="card-title">java-practice</h3>
         <p class="card-body">
-          지금 보고 있는 이 사이트는 Astro + GitHub Pages로 만든
-          정적 포트폴리오 블로그입니다. 프로젝트와 회고를 모아두는 공간이에요.
+          주차별·난이도별로 Java 문제를 풀며 문법과 자료구조, 알고리즘 감각을 유지하는 레포입니다.
+          한 문제당 한 커밋 규칙으로 공부 이력을 관리하고 있습니다.
         </p>
         <ul class="card-meta">
-          <li>Astro</li>
-          <li>GitHub Actions</li>
-          <li>정적 배포</li>
+          <li>Java</li>
+          <li>자료구조</li>
+          <li>알고리즘</li>
         </ul>
-        <a href="/posts" class="card-link">블로그 글 모아보기 →</a>
+        <a href="/posts/java-practice-routine" class="card-link">공부 루틴 보러가기 →</a>
       </article>
     </div>
   </section>
@@ -130,16 +129,16 @@ import Layout from "../layouts/Layout.astro";
           콘솔 게임 하나를 끝까지 만들면서 겪은 설계 고민과,
           모드·랭킹 기능을 붙이며 배운 점을 정리한 글입니다.
         </p>
-        <a href="/posts/taprun" class="recent-link">글 보러가기 →</a>
+        <a href="/posts/taprun-retro" class="recent-link">글 보러가기 →</a>
       </article>
 
       <article class="recent-item">
-        <h3>포트폴리오용 프로젝트를 고르는 기준</h3>
+        <h3>java-practice로 유지하는 Java 감각</h3>
         <p>
-          단순 CRUD가 아닌, 실제 서비스 도메인과 사용자 흐름을
-          기준으로 프로젝트를 고르려는 이유를 정리했습니다.
+          Week/난이도 폴더 구조와 한 문제당 한 커밋 규칙을 중심으로,
+          Java와 알고리즘 감각을 꾸준히 유지하는 공부 루틴을 정리했습니다.
         </p>
-        <a href="/posts" class="recent-link">다른 글도 보기 →</a>
+        <a href="/posts/java-practice-routine" class="recent-link">글 보러가기 →</a>
       </article>
     </div>
   </section>
@@ -148,7 +147,7 @@ import Layout from "../layouts/Layout.astro";
 <style>
   .hero {
     display: grid;
-    grid-template-columns: minmax(0, 3fr) minmax(0, 2.3fr);
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
     gap: 28px;
     align-items: flex-start;
     margin-bottom: 40px;
@@ -165,22 +164,22 @@ import Layout from "../layouts/Layout.astro";
     align-items: center;
     padding: 4px 12px;
     border-radius: 999px;
-    background: #fef3c7;
+    background: #fef9c3; /* 연노랑 */
     border: 1px solid #fde68a;
-    color: #92400e;
+    color: #854d0e;
     font-size: 12px;
     letter-spacing: 0.06em;
   }
 
   .hero-title {
     margin: 0;
-    font-size: 26px;
-    line-height: 1.5;
+    font-size: 24px;
+    line-height: 1.6;
     letter-spacing: -0.01em;
   }
 
   .hero-title span {
-    color: #a78bfa;
+    color: #6366f1;
   }
 
   .hero-sub {
@@ -194,11 +193,11 @@ import Layout from "../layouts/Layout.astro";
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 6px;
+    margin-top: 4px;
   }
 
   .btn-primary,
-  .btn-soft {
+  .btn-ghost {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -208,39 +207,38 @@ import Layout from "../layouts/Layout.astro";
     font-weight: 500;
     cursor: pointer;
     border: 1px solid transparent;
-    transition: background 150ms ease-out, box-shadow 150ms ease-out,
-      transform 150ms ease-out, border-color 150ms ease-out;
+    transition: background 140ms ease-out, box-shadow 140ms ease-out,
+      transform 140ms ease-out, border-color 140ms ease-out;
   }
 
   .btn-primary {
-    background: linear-gradient(135deg, #a78bfa, #f9a8d4);
+    background: linear-gradient(135deg, #93c5fd, #f9a8d4); /* 하늘+분홍 */
     color: #ffffff;
-    box-shadow: 0 10px 24px rgba(249, 168, 212, 0.5);
+    box-shadow: 0 8px 18px rgba(148, 163, 184, 0.35);
   }
 
   .btn-primary:hover {
     transform: translateY(-1px);
-    box-shadow: 0 14px 30px rgba(167, 139, 250, 0.5);
+    box-shadow: 0 10px 22px rgba(148, 163, 184, 0.4);
   }
 
-  .btn-soft {
+  .btn-ghost {
     background: #ffffff;
     border-color: #e5e7eb;
     color: #4b5563;
   }
 
-  .btn-soft:hover {
-    background: #fefce8;
-    border-color: #facc15;
+  .btn-ghost:hover {
+    background: #f9fafb;
+    border-color: #d1d5db;
     transform: translateY(-1px);
-    box-shadow: 0 10px 22px rgba(250, 204, 21, 0.25);
   }
 
   .hero-meta {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-    margin: 8px 0 0;
+    gap: 14px;
+    margin: 10px 0 0;
     font-size: 13px;
   }
 
@@ -256,25 +254,22 @@ import Layout from "../layouts/Layout.astro";
 
   .hero-side {
     background: #ffffff;
-    border-radius: 18px;
-    padding: 16px 16px 14px;
+    border-radius: 16px;
+    padding: 14px 16px 12px;
     border: 1px solid #e5e7eb;
-    box-shadow: 0 10px 24px rgba(148, 163, 184, 0.25);
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
   }
 
-  .side-badge {
+  .side-header {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 4px 10px;
-    border-radius: 999px;
-    background: #f5f3ff;
-    color: #4f46e5;
-    font-size: 12px;
     margin-bottom: 10px;
+    font-size: 12px;
+    color: #4b5563;
   }
 
-  .badge-dot {
+  .side-dot {
     width: 8px;
     height: 8px;
     border-radius: 999px;
@@ -304,7 +299,7 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .section {
-    margin-top: 40px;
+    margin-top: 38px;
   }
 
   .section-header {
@@ -335,11 +330,11 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .card {
-    background: var(--bg-card);
-    border-radius: 18px;
-    padding: 16px 16px 14px;
-    border: 1px solid var(--border-subtle);
-    box-shadow: var(--shadow-soft);
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 15px 15px 13px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
     font-size: 13px;
     display: flex;
     flex-direction: column;
@@ -365,9 +360,9 @@ import Layout from "../layouts/Layout.astro";
     color: #9d174d;
   }
 
-  .tag-mint {
-    background: #ecfeff;
-    color: #115e59;
+  .tag-blue {
+    background: #eff6ff;
+    color: #1d4ed8;
   }
 
   .card-title {
@@ -417,10 +412,10 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .recent-item {
-    background: #fefce8;
-    border-radius: 16px;
-    padding: 14px 16px;
-    border: 1px solid #fde68a;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 13px 15px;
+    border: 1px solid #e5e7eb;
   }
 
   .recent-item h3 {
@@ -436,7 +431,7 @@ import Layout from "../layouts/Layout.astro";
 
   .recent-link {
     font-size: 12px;
-    color: #b45309;
+    color: #6366f1;
   }
 
   .recent-link:hover {
@@ -459,7 +454,7 @@ import Layout from "../layouts/Layout.astro";
 
   @media (max-width: 640px) {
     .hero-title {
-      font-size: 22px;
+      font-size: 21px;
     }
 
     .hero-meta {
@@ -475,4 +470,3 @@ import Layout from "../layouts/Layout.astro";
     }
   }
 </style>
-

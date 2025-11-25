@@ -45,20 +45,19 @@ const { title = "hyebin-dev — Portfolio & Blog" } = Astro.props;
 
   <style global>
     :root {
-      --bg: #f8fafc;
-      --bg-soft: #fdf2ff;
-      --bg-card: #ffffff;
-      --accent: #a78bfa; /* 연보라 */
-      --accent-soft: #ede9fe;
+      --bg: #ffffff;
+      --bg-soft: #f9fafb;
+      --accent-blue: #93c5fd;
       --accent-pink: #f9a8d4;
-      --text-main: #111827;
+      --accent-yellow: #fde68a;
+      --text-main: #0f172a;
       --text-muted: #6b7280;
       --border-subtle: #e5e7eb;
-      --shadow-soft: 0 10px 25px rgba(148, 163, 184, 0.25);
-      --radius-lg: 18px;
+      --shadow-soft: 0 6px 18px rgba(15, 23, 42, 0.06);
+      --radius-lg: 16px;
       --radius-full: 999px;
       --max-width: 960px;
-      --transition-fast: 150ms ease-out;
+      --transition-fast: 140ms ease-out;
     }
 
     * {
@@ -71,7 +70,7 @@ const { title = "hyebin-dev — Portfolio & Blog" } = Astro.props;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         sans-serif;
       color: var(--text-main);
-      background: radial-gradient(circle at top, #eef2ff 0, #fdf2ff 35%, #f9fafb 100%);
+      background: var(--bg);
     }
 
     a {
@@ -80,7 +79,7 @@ const { title = "hyebin-dev — Portfolio & Blog" } = Astro.props;
     }
 
     a:focus-visible {
-      outline: 2px solid var(--accent);
+      outline: 2px solid var(--accent-blue);
       outline-offset: 3px;
       border-radius: 6px;
     }
@@ -89,20 +88,15 @@ const { title = "hyebin-dev — Portfolio & Blog" } = Astro.props;
       position: sticky;
       top: 0;
       z-index: 10;
-      backdrop-filter: blur(16px);
-      background: linear-gradient(
-        to bottom,
-        rgba(248, 250, 252, 0.95),
-        rgba(248, 250, 252, 0.8),
-        transparent
-      );
-      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+      background: #ffffff;
+      border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02);
     }
 
     .nav-inner {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 12px 20px 10px;
+      padding: 10px 20px 8px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -117,21 +111,21 @@ const { title = "hyebin-dev — Portfolio & Blog" } = Astro.props;
       border-radius: var(--radius-full);
       background: #ffffff;
       border: 1px solid #e5e7eb;
-      box-shadow: 0 6px 18px rgba(148, 163, 184, 0.35);
+      box-shadow: 0 4px 10px rgba(148, 163, 184, 0.25);
       transition: transform var(--transition-fast), box-shadow var(--transition-fast),
         border-color var(--transition-fast), background var(--transition-fast);
     }
 
     .logo-mark {
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
       border-radius: 50%;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: radial-gradient(circle at 30% 0, #f9a8d4, #a78bfa);
+      background: radial-gradient(circle at 30% 0, #f9a8d4, #93c5fd);
       color: #ffffff;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
     }
 
@@ -144,8 +138,8 @@ const { title = "hyebin-dev — Portfolio & Blog" } = Astro.props;
     .logo:hover {
       transform: translateY(-1px);
       background: #fefce8;
-      border-color: #f9a8d4;
-      box-shadow: 0 10px 26px rgba(148, 163, 184, 0.4);
+      border-color: #fde68a;
+      box-shadow: 0 6px 16px rgba(148, 163, 184, 0.35);
     }
 
     .nav-links {
@@ -156,30 +150,29 @@ const { title = "hyebin-dev — Portfolio & Blog" } = Astro.props;
     }
 
     .nav-links a {
-      padding: 6px 12px;
+      padding: 6px 10px;
       border-radius: var(--radius-full);
       color: var(--text-muted);
       transition: background var(--transition-fast), color var(--transition-fast),
-        transform var(--transition-fast), box-shadow var(--transition-fast);
+        transform var(--transition-fast);
     }
 
     .nav-links a:hover {
-      background: var(--accent-soft);
+      background: var(--bg-soft);
       color: var(--text-main);
-      box-shadow: 0 6px 14px rgba(167, 139, 250, 0.25);
       transform: translateY(-1px);
     }
 
     .site-main {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 28px 20px 56px;
+      padding: 26px 20px 52px;
     }
 
     .site-footer {
       border-top: 1px solid rgba(226, 232, 240, 0.9);
-      padding: 16px 20px 28px;
-      background: linear-gradient(to top, #f9fafb, rgba(249, 250, 251, 0.6));
+      padding: 14px 20px 24px;
+      background: #f9fafb;
       font-size: 13px;
       color: var(--text-muted);
     }
@@ -214,4 +207,3 @@ const { title = "hyebin-dev — Portfolio & Blog" } = Astro.props;
     }
   </style>
 </html>
-

@@ -1,11 +1,120 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from "../../layouts/Layout.astro";
+
+const posts = [
+  {
+    slug: "taprun-retro",
+    title: "Tap Run 개발 회고 — 콘솔 게임 하나를 끝까지",
+    summary:
+      "Race / Monster / Vs AI 세 가지 모드를 설계하면서 구조를 어떻게 나눴는지, Quiet Gap과 랭킹 저장 구조를 어떻게 잡았는지 정리한 글입니다.",
+    tags: ["Java", "콘솔 게임", "설계"]
+  },
+  {
+    slug: "java-practice-routine",
+    title: "java-practice 레포로 유지하는 Java 감각",
+    summary:
+      "주차별·난이도별 폴더 구조와 한 문제당 한 커밋 규칙을 중심으로, 꾸준히 Java/자료구조 감각을 유지하기 위한 공부 루틴을 정리했습니다.",
+    tags: ["Java", "자료구조", "알고리즘"]
+  }
+  // 나중에 글 더 생기면 여기 배열에 추가하면 됨
+];
 ---
-<Layout title="Posts">
-  <h1>Posts</h1>
-  <ul class="postlist">
-    <li><a href="/posts/tap-run">Tap Run — 콘솔 탭 러닝 게임 (Java)</a></li>
-    <li><a href="/posts/week01-review">Java Week01 회고 — 오목·달팽이·시뮬레이션</a></li>
-    <li><a href="/posts/hello-world">Hello World</a></li>
-  </ul>
+
+<Layout title="Posts — hyebin-dev">
+  <section class="page-header">
+    <h1>Posts</h1>
+    <p>
+      프로젝트를 만들면서 배운 점, 설계 고민, 포트폴리오 관련 생각들을
+      짧게라도 남겨두는 공간입니다.
+    </p>
+  </section>
+
+  <section class="post-list">
+    {posts.map((post) => (
+      <article class="post-card">
+        <a href={`/posts/${post.slug}`}>
+          <h2>{post.title}</h2>
+        </a>
+        <p class="post-summary">{post.summary}</p>
+        <ul class="post-tags">
+          {post.tags.map((tag) => (
+            <li>{tag}</li>
+          ))}
+        </ul>
+        <a href={`/posts/${post.slug}`} class="post-link">
+          글 보러가기 →
+        </a>
+      </article>
+    ))}
+  </section>
 </Layout>
+
+<style>
+  .page-header {
+    margin-bottom: 24px;
+  }
+
+  .page-header h1 {
+    margin: 0 0 6px;
+    font-size: 24px;
+  }
+
+  .page-header p {
+    margin: 0;
+    font-size: 14px;
+    color: #6b7280;
+  }
+
+  .post-list {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .post-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+    padding: 14px 16px;
+    font-size: 13px;
+  }
+
+  .post-card h2 {
+    margin: 0 0 6px;
+    font-size: 18px;
+  }
+
+  .post-summary {
+    margin: 0 0 8px;
+    color: #4b5563;
+    line-height: 1.7;
+  }
+
+  .post-tags {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 6px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .post-tags li {
+    padding: 2px 8px;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    font-size: 11px;
+    color: #4b5563;
+  }
+
+  .post-link {
+    font-size: 13px;
+    color: #6366f1;
+  }
+
+  .post-link:hover {
+    text-decoration: underline;
+  }
+</style>

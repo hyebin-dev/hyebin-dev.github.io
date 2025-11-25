@@ -1,7 +1,41 @@
 ---
 import Layout from "../layouts/Layout.astro";
 ---
-<Layout title="Resume">
-  <h1>Resume</h1>
-  <p>여기에 이력서 요약을 적거나, <code>public/resume.pdf</code>를 업로드한 뒤 <a href="/resume.pdf">PDF 바로가기</a>로 연결하세요.</p>
+
+<Layout title="Resume — hyebin-dev">
+  <section class="resume">
+    <h1>Resume</h1>
+    <p>
+      이력서는 아직 정리 중입니다. PDF 형태로 정리되면
+      GitHub 저장소나 Notion 링크로 연결해 둘 예정입니다.
+    </p>
+    <p>
+      그 전까지는
+      <a href="/projects">Projects 페이지</a>와
+      <a href="/about">About 페이지</a>에서 경험을 확인하실 수 있습니다.
+    </p>
+  </section>
 </Layout>
+
+<style>
+  .resume {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .resume h1 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 24px;
+  }
+
+  .resume a {
+    color: #6366f1;
+  }
+
+  .resume a:hover {
+    text-decoration: underline;
+  }
+</style>

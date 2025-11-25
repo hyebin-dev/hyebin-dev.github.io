@@ -1,8 +1,123 @@
 ---
 import Layout from "../layouts/Layout.astro";
 ---
-<Layout title="About">
-  <h1>About</h1>
-  <p>풀스택 개발자 취업 준비 중인 hyebin-dev의 기술/프로젝트 기록입니다.</p>
-  <p class="muted">관심 스택: React/Next.js, Node/Nest.js, PostgreSQL, AWS, CI/CD</p>
+
+<Layout title="About — hyebin-dev">
+  <article class="about">
+    <h1>About</h1>
+    <p class="lead">
+      안녕하세요, 김혜빈입니다. Java & Spring 기반 백엔드를 중심으로
+      웹 서비스 전반을 공부하고 있는 풀스택 지망 개발자입니다.
+    </p>
+
+    <section>
+      <h2>지금까지의 공부 방향</h2>
+      <p>
+        학교 프로젝트와 국비 과정, 사이드 프로젝트를 통해
+        <strong>콘솔 → 웹</strong> 순서로 차근차근 범위를 넓혀 왔습니다.
+      </p>
+      <ul>
+        <li>Tap Run 콘솔 게임으로 Java/OOP 구조와 파일 I/O 연습</li>
+        <li>Naebang Real Estate 팀 프로젝트로
+          실제 도메인 서비스 흐름과 프론트엔드 협업 경험</li>
+        <li>java-practice 레포로 자료구조·알고리즘 감각 유지</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>관심 있는 것</h2>
+      <p>
+        “사용자가 실제로 오래 쓰는 웹 서비스”를 만드는 데 관심이 많습니다.
+        기능이 많기보다는, 흐름이 자연스럽고 튀는 부분 없이 잘 이어지는
+        서비스 설계를 좋아합니다.
+      </p>
+      <p>
+        특히 구독형 서비스, 예약/결제, 마이페이지처럼
+        <strong>데이터 모델과 상태 흐름을 설계해야 하는 영역</strong>을 더 깊게 파고들고 있습니다.
+      </p>
+    </section>
+
+    <section>
+      <h2>지금 만드는 것들</h2>
+      <ul>
+        <li>Tap Run 콘솔 게임 리팩터링 및 테스트 코드 추가</li>
+        <li>부동산 웹 서비스 기능 정리 및 포트폴리오용 페이지 구성</li>
+        <li>Astro + GitHub Pages 블로그 정리 및 글 작성 루틴 만들기</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Links</h2>
+      <ul class="links">
+        <li>
+          GitHub ·
+          <a href="https://github.com/hyebin-dev" target="_blank" rel="noreferrer"
+            >@hyebin-dev</a
+          >
+        </li>
+        <li>
+          Blog ·
+          <a href="https://hyebin-dev.github.io" target="_blank" rel="noreferrer"
+            >hyebin-dev.github.io</a
+          >
+        </li>
+      </ul>
+    </section>
+  </article>
 </Layout>
+
+<style>
+  .about {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .about h1 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 24px;
+  }
+
+  .lead {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #4b5563;
+  }
+
+  section {
+    margin-top: 22px;
+  }
+
+  section h2 {
+    margin: 0 0 6px;
+    font-size: 18px;
+  }
+
+  section p {
+    margin: 4px 0;
+  }
+
+  ul {
+    margin: 4px 0 4px 18px;
+  }
+
+  .links {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .links li {
+    margin-bottom: 4px;
+  }
+
+  .links a {
+    color: #6366f1;
+  }
+
+  .links a:hover {
+    text-decoration: underline;
+  }
+</style>
