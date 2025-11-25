@@ -1,10 +1,464 @@
 ---
 import Layout from "../layouts/Layout.astro";
 ---
-<Layout title="hyebin-dev — 풀스택 포트폴리오" description="풀스택 개발자 hyebin-dev의 기술 블로그 & 포트폴리오">
-  <h1>환영합니다 👋</h1>
-  <p class="muted">이 사이트는 Astro + GitHub Pages로 배포되는 정적 블로그입니다.</p>
-  <ul class="postlist">
-    <li><a href="/posts/hello-world">첫 글 보러가기</a></li>
-  </ul>
+
+<Layout title="hyebin-dev — 풀스택 포트폴리오">
+  <section class="hero">
+    <div class="hero-main">
+      <p class="hero-pill">풀스택 성장 로그 · Java · Spring · React</p>
+
+      <h1 class="hero-title">
+        안녕하세요, <span>hyebin-dev</span> 입니다.
+        <br />
+        실제 서비스에 가까운 사이드 프로젝트로
+        <br />
+        꾸준히 성장하고 있는 개발자입니다.
+      </h1>
+
+      <p class="hero-sub">
+        게임 콘솔 프로젝트부터 부동산·OTT 웹 서비스까지,<br />
+        도메인을 정하고 설계 → 구현 → 회고까지 스스로 끝까지 가져가는 것을 좋아합니다.
+      </p>
+
+      <div class="hero-actions">
+        <a href="/projects" class="btn-primary">대표 Projects 보러가기</a>
+        <a href="/posts" class="btn-ghost">최근 글 보기</a>
+      </div>
+
+      <dl class="hero-meta">
+        <div>
+          <dt>주요 스택</dt>
+          <dd>Java · Spring · MySQL · React · Astro</dd>
+        </div>
+        <div>
+          <dt>관심 분야</dt>
+          <dd>웹 백엔드, 서비스 설계, 포트폴리오 프로젝트</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="hero-highlight">
+      <div class="highlight-header">
+        <span class="highlight-chip">Now Building</span>
+        <span class="highlight-label">현재 작업 중</span>
+      </div>
+      <ul class="highlight-list">
+        <li>
+          <h3>Netflix 스타일 OTT 포트폴리오</h3>
+          <p>
+            구독·결제·시청 이력·리뷰까지 포함한 웹 서비스로,
+            Spring Boot + React + MySQL 기반으로 설계 중입니다.
+          </p>
+        </li>
+        <li>
+          <h3>Tap Run 콘솔 게임 고도화</h3>
+          <p>
+            Java 콘솔 러닝 게임에 다양한 모드와 랭킹 시스템을 붙여
+            구조와 확장성을 중심으로 리팩터링하고 있습니다.
+          </p>
+        </li>
+      </ul>
+    </aside>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Featured Projects</h2>
+      <a href="/projects" class="section-more">모든 Projects 보기 →</a>
+    </div>
+
+    <div class="card-grid">
+      <article class="card">
+        <div class="card-tag">Java 콘솔 게임</div>
+        <h3 class="card-title">Tap Run</h3>
+        <p class="card-body">
+          다양한 게임 모드(싱글/VS AI/아이템전)와 파일 기반 랭킹 시스템이 있는
+          콘솔 러닝 게임입니다. 객체지향 설계와 확장성을 중점적으로 고민했습니다.
+        </p>
+        <ul class="card-meta">
+          <li>Java 11</li>
+          <li>OOP 설계</li>
+          <li>파일 I/O</li>
+        </ul>
+        <a href="/posts/taprun" class="card-link">프로젝트 정리 보러가기 →</a>
+      </article>
+
+      <article class="card">
+        <div class="card-tag">웹 서비스 · 팀 프로젝트</div>
+        <h3 class="card-title">부동산 매물 웹사이트</h3>
+        <p class="card-body">
+          지역·조건별 매물 검색과 즐겨찾기, 정책/꿀팁 콘텐츠까지 제공하는
+          팀 프로젝트입니다. 특정 기능을 맡아 설계부터 구현까지 담당했습니다.
+        </p>
+        <ul class="card-meta">
+          <li>HTML/CSS/JS</li>
+          <li>REST API</li>
+          <li>팀 협업</li>
+        </ul>
+        <a href="/projects" class="card-link">담당 역할 자세히 보기 →</a>
+      </article>
+
+      <article class="card">
+        <div class="card-tag">포트폴리오</div>
+        <h3 class="card-title">GitHub Pages 블로그</h3>
+        <p class="card-body">
+          지금 보고 있는 이 블로그는 Astro + GitHub Pages로 구축한
+          정적 포트폴리오 사이트입니다. 프로젝트와 회고 글을 꾸준히 정리하고 있습니다.
+        </p>
+        <ul class="card-meta">
+          <li>Astro</li>
+          <li>GitHub Actions</li>
+          <li>정적 배포</li>
+        </ul>
+        <a href="/posts" class="card-link">블로그 글 모아보기 →</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>최근 글</h2>
+      <a href="/posts" class="section-more">모든 글 보기 →</a>
+    </div>
+
+    <div class="recent-list">
+      <article class="recent-item">
+        <h3>Tap Run 개발 회고</h3>
+        <p>
+          콘솔 게임 하나를 만들면서 겪었던 설계 고민과, 모드/랭킹 기능을
+          확장하는 과정에서 배운 점을 정리한 글입니다.
+        </p>
+        <a href="/posts/taprun" class="recent-link">글 보러가기 →</a>
+      </article>
+
+      <article class="recent-item">
+        <h3>포트폴리오용 프로젝트를 고르는 기준</h3>
+        <p>
+          단순 CRUD가 아닌, 실제 서비스 도메인과 사용 시나리오를
+          기준으로 프로젝트를 설계하려고 하는 이유를 정리했습니다.
+        </p>
+        <a href="/posts" class="recent-link">글 모아보기 →</a>
+      </article>
+    </div>
+  </section>
 </Layout>
+
+<style>
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+    gap: 32px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+
+  .hero-main {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .hero-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(148, 163, 184, 0.5);
+    color: #e5e7eb;
+  }
+
+  .hero-title {
+    font-size: 28px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+
+  .hero-title span {
+    color: #a855f7;
+  }
+
+  .hero-sub {
+    margin: 0;
+    color: #9ca3af;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 6px;
+  }
+
+  .btn-primary,
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 16px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background 160ms ease-out, border-color 160ms ease-out,
+      transform 160ms ease-out, box-shadow 160ms ease-out;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    box-shadow: 0 14px 35px rgba(55, 65, 81, 0.7);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
+  }
+
+  .btn-ghost {
+    border-color: rgba(148, 163, 184, 0.7);
+    background: rgba(15, 23, 42, 0.8);
+    color: #e5e7eb;
+  }
+
+  .btn-ghost:hover {
+    background: rgba(15, 23, 42, 0.95);
+    transform: translateY(-1px);
+  }
+
+  .hero-meta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin: 10px 0 0;
+    font-size: 13px;
+  }
+
+  .hero-meta dt {
+    font-weight: 600;
+    color: #e5e7eb;
+    margin-bottom: 4px;
+  }
+
+  .hero-meta dd {
+    margin: 0;
+    color: #9ca3af;
+  }
+
+  .hero-highlight {
+    background: radial-gradient(circle at top left, #1d1b3f, #020617);
+    border-radius: 18px;
+    padding: 18px 18px 16px;
+    border: 1px solid rgba(129, 140, 248, 0.6);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
+  }
+
+  .highlight-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .highlight-chip {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(191, 219, 254, 0.5);
+    color: #bfdbfe;
+  }
+
+  .highlight-label {
+    font-size: 12px;
+    color: #a5b4fc;
+  }
+
+  .highlight-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 13px;
+  }
+
+  .highlight-list h3 {
+    margin: 0 0 4px;
+    font-size: 14px;
+  }
+
+  .highlight-list p {
+    margin: 0;
+    color: #e5e7eb;
+    line-height: 1.6;
+  }
+
+  .section {
+    margin-top: 40px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+  }
+
+  .section-header h2 {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .section-more {
+    font-size: 13px;
+    color: #a5b4fc;
+  }
+
+  .section-more:hover {
+    text-decoration: underline;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .card {
+    background: rgba(15, 23, 42, 0.9);
+    border-radius: 18px;
+    padding: 16px 16px 14px;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.85);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13px;
+  }
+
+  .card-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 9px;
+    border-radius: 999px;
+    font-size: 11px;
+    background: rgba(30, 64, 175, 0.45);
+    color: #dbeafe;
+    width: fit-content;
+  }
+
+  .card-title {
+    margin: 4px 0 2px;
+    font-size: 16px;
+  }
+
+  .card-body {
+    margin: 0;
+    color: #9ca3af;
+    line-height: 1.7;
+  }
+
+  .card-meta {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 6px 0 0;
+    padding: 0;
+  }
+
+  .card-meta li {
+    padding: 2px 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.6);
+    font-size: 11px;
+    color: #e5e7eb;
+  }
+
+  .card-link {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #a5b4fc;
+  }
+
+  .card-link:hover {
+    text-decoration: underline;
+  }
+
+  .recent-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    font-size: 13px;
+  }
+
+  .recent-item {
+    padding: 14px 16px;
+    border-radius: 16px;
+    border: 1px dashed rgba(148, 163, 184, 0.5);
+    background: rgba(15, 23, 42, 0.7);
+  }
+
+  .recent-item h3 {
+    margin: 0 0 4px;
+    font-size: 15px;
+  }
+
+  .recent-item p {
+    margin: 0 0 6px;
+    color: #9ca3af;
+    line-height: 1.6;
+  }
+
+  .recent-link {
+    font-size: 12px;
+    color: #a5b4fc;
+  }
+
+  .recent-link:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 900px) {
+    .hero {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hero-highlight {
+      order: -1;
+    }
+
+    .card-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero-title {
+      font-size: 22px;
+    }
+
+    .hero-meta {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .card-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .recent-list {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>
