@@ -2,27 +2,28 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="hyebin-dev — 풀스택 포트폴리오">
+<Layout title="hyebin-dev — Portfolio & Blog">
   <section class="hero">
     <div class="hero-main">
-      <p class="hero-pill">풀스택 성장 로그 · Java · Spring · React</p>
+      <p class="hero-pill">꾸준히 쌓아가는 성장 로그 ✿</p>
 
       <h1 class="hero-title">
         안녕하세요, <span>hyebin-dev</span> 입니다.
         <br />
-        실제 서비스에 가까운 사이드 프로젝트로
+        작은 실습부터 서비스형 프로젝트까지,
         <br />
-        꾸준히 성장하고 있는 개발자입니다.
+        차분하게 꾸준히 만들어 가고 있어요.
       </h1>
 
       <p class="hero-sub">
-        게임 콘솔 프로젝트부터 부동산·OTT 웹 서비스까지,<br />
-        도메인을 정하고 설계 → 구현 → 회고까지 스스로 끝까지 가져가는 것을 좋아합니다.
+        Java & Spring 기반 백엔드와 React, Astro로 웹 프론트까지 함께 다루고 있습니다.
+        <br />
+        학교·팀프로젝트·사이드프로젝트를 하나의 포트폴리오로 정리하고 있어요.
       </p>
 
       <div class="hero-actions">
         <a href="/projects" class="btn-primary">대표 Projects 보러가기</a>
-        <a href="/posts" class="btn-ghost">최근 글 보기</a>
+        <a href="/posts" class="btn-soft">학습/회고 글 보기</a>
       </div>
 
       <dl class="hero-meta">
@@ -37,24 +38,25 @@ import Layout from "../layouts/Layout.astro";
       </dl>
     </div>
 
-    <aside class="hero-highlight">
-      <div class="highlight-header">
-        <span class="highlight-chip">Now Building</span>
-        <span class="highlight-label">현재 작업 중</span>
+    <aside class="hero-side">
+      <div class="side-badge">
+        <span class="badge-dot" />
+        <span>Now Building</span>
       </div>
-      <ul class="highlight-list">
+
+      <ul class="side-list">
         <li>
           <h3>Netflix 스타일 OTT 포트폴리오</h3>
           <p>
-            구독·결제·시청 이력·리뷰까지 포함한 웹 서비스로,
-            Spring Boot + React + MySQL 기반으로 설계 중입니다.
+            구독·결제·시청 이력·리뷰를 포함한 웹 서비스를
+            Spring Boot + React + MySQL로 구현하며 설계력을 다듬는 중입니다.
           </p>
         </li>
         <li>
           <h3>Tap Run 콘솔 게임 고도화</h3>
           <p>
-            Java 콘솔 러닝 게임에 다양한 모드와 랭킹 시스템을 붙여
-            구조와 확장성을 중심으로 리팩터링하고 있습니다.
+            다양한 모드와 랭킹 시스템이 있는 Java 콘솔 게임으로,
+            객체지향 구조와 확장성을 중심으로 리팩터링하고 있습니다.
           </p>
         </li>
       </ul>
@@ -69,41 +71,41 @@ import Layout from "../layouts/Layout.astro";
 
     <div class="card-grid">
       <article class="card">
-        <div class="card-tag">Java 콘솔 게임</div>
+        <div class="card-tag tag-purple">Java 콘솔 게임</div>
         <h3 class="card-title">Tap Run</h3>
         <p class="card-body">
-          다양한 게임 모드(싱글/VS AI/아이템전)와 파일 기반 랭킹 시스템이 있는
-          콘솔 러닝 게임입니다. 객체지향 설계와 확장성을 중점적으로 고민했습니다.
+          다양한 게임 모드와 파일 기반 랭킹 시스템이 있는 콘솔 러닝 게임입니다.
+          모드 분리와 확장 가능한 구조를 목표로 설계했습니다.
         </p>
         <ul class="card-meta">
           <li>Java 11</li>
-          <li>OOP 설계</li>
+          <li>OOP</li>
           <li>파일 I/O</li>
         </ul>
         <a href="/posts/taprun" class="card-link">프로젝트 정리 보러가기 →</a>
       </article>
 
       <article class="card">
-        <div class="card-tag">웹 서비스 · 팀 프로젝트</div>
+        <div class="card-tag tag-pink">웹 서비스 · 팀 프로젝트</div>
         <h3 class="card-title">부동산 매물 웹사이트</h3>
         <p class="card-body">
-          지역·조건별 매물 검색과 즐겨찾기, 정책/꿀팁 콘텐츠까지 제공하는
-          팀 프로젝트입니다. 특정 기능을 맡아 설계부터 구현까지 담당했습니다.
+          지역/조건별 매물 검색, 즐겨찾기, 정책·꿀팁 콘텐츠를 제공하는 팀 프로젝트입니다.
+          맡은 기능을 설계부터 구현까지 직접 담당했습니다.
         </p>
         <ul class="card-meta">
           <li>HTML/CSS/JS</li>
-          <li>REST API</li>
-          <li>팀 협업</li>
+          <li>REST 흐름</li>
+          <li>협업</li>
         </ul>
         <a href="/projects" class="card-link">담당 역할 자세히 보기 →</a>
       </article>
 
       <article class="card">
-        <div class="card-tag">포트폴리오</div>
+        <div class="card-tag tag-mint">포트폴리오</div>
         <h3 class="card-title">GitHub Pages 블로그</h3>
         <p class="card-body">
-          지금 보고 있는 이 블로그는 Astro + GitHub Pages로 구축한
-          정적 포트폴리오 사이트입니다. 프로젝트와 회고 글을 꾸준히 정리하고 있습니다.
+          지금 보고 있는 이 사이트는 Astro + GitHub Pages로 만든
+          정적 포트폴리오 블로그입니다. 프로젝트와 회고를 모아두는 공간이에요.
         </p>
         <ul class="card-meta">
           <li>Astro</li>
@@ -125,8 +127,8 @@ import Layout from "../layouts/Layout.astro";
       <article class="recent-item">
         <h3>Tap Run 개발 회고</h3>
         <p>
-          콘솔 게임 하나를 만들면서 겪었던 설계 고민과, 모드/랭킹 기능을
-          확장하는 과정에서 배운 점을 정리한 글입니다.
+          콘솔 게임 하나를 끝까지 만들면서 겪은 설계 고민과,
+          모드·랭킹 기능을 붙이며 배운 점을 정리한 글입니다.
         </p>
         <a href="/posts/taprun" class="recent-link">글 보러가기 →</a>
       </article>
@@ -134,10 +136,10 @@ import Layout from "../layouts/Layout.astro";
       <article class="recent-item">
         <h3>포트폴리오용 프로젝트를 고르는 기준</h3>
         <p>
-          단순 CRUD가 아닌, 실제 서비스 도메인과 사용 시나리오를
-          기준으로 프로젝트를 설계하려고 하는 이유를 정리했습니다.
+          단순 CRUD가 아닌, 실제 서비스 도메인과 사용자 흐름을
+          기준으로 프로젝트를 고르려는 이유를 정리했습니다.
         </p>
-        <a href="/posts" class="recent-link">글 모아보기 →</a>
+        <a href="/posts" class="recent-link">다른 글도 보기 →</a>
       </article>
     </div>
   </section>
@@ -146,8 +148,8 @@ import Layout from "../layouts/Layout.astro";
 <style>
   .hero {
     display: grid;
-    grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
-    gap: 32px;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2.3fr);
+    gap: 28px;
     align-items: flex-start;
     margin-bottom: 40px;
   }
@@ -161,33 +163,31 @@ import Layout from "../layouts/Layout.astro";
   .hero-pill {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
     padding: 4px 12px;
     border-radius: 999px;
+    background: #fef3c7;
+    border: 1px solid #fde68a;
+    color: #92400e;
     font-size: 12px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    background: rgba(15, 23, 42, 0.9);
-    border: 1px solid rgba(148, 163, 184, 0.5);
-    color: #e5e7eb;
+    letter-spacing: 0.06em;
   }
 
   .hero-title {
-    font-size: 28px;
-    line-height: 1.4;
-    letter-spacing: -0.02em;
     margin: 0;
+    font-size: 26px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
   }
 
   .hero-title span {
-    color: #a855f7;
+    color: #a78bfa;
   }
 
   .hero-sub {
     margin: 0;
-    color: #9ca3af;
+    color: #6b7280;
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.8;
   }
 
   .hero-actions {
@@ -198,110 +198,109 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .btn-primary,
-  .btn-ghost {
+  .btn-soft {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 9px 16px;
+    padding: 8px 16px;
     border-radius: 999px;
     font-size: 14px;
     font-weight: 500;
-    border: 1px solid transparent;
     cursor: pointer;
-    transition: background 160ms ease-out, border-color 160ms ease-out,
-      transform 160ms ease-out, box-shadow 160ms ease-out;
+    border: 1px solid transparent;
+    transition: background 150ms ease-out, box-shadow 150ms ease-out,
+      transform 150ms ease-out, border-color 150ms ease-out;
   }
 
   .btn-primary {
-    background: linear-gradient(135deg, #6366f1, #a855f7);
-    box-shadow: 0 14px 35px rgba(55, 65, 81, 0.7);
+    background: linear-gradient(135deg, #a78bfa, #f9a8d4);
+    color: #ffffff;
+    box-shadow: 0 10px 24px rgba(249, 168, 212, 0.5);
   }
 
   .btn-primary:hover {
     transform: translateY(-1px);
-    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
+    box-shadow: 0 14px 30px rgba(167, 139, 250, 0.5);
   }
 
-  .btn-ghost {
-    border-color: rgba(148, 163, 184, 0.7);
-    background: rgba(15, 23, 42, 0.8);
-    color: #e5e7eb;
+  .btn-soft {
+    background: #ffffff;
+    border-color: #e5e7eb;
+    color: #4b5563;
   }
 
-  .btn-ghost:hover {
-    background: rgba(15, 23, 42, 0.95);
+  .btn-soft:hover {
+    background: #fefce8;
+    border-color: #facc15;
     transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(250, 204, 21, 0.25);
   }
 
   .hero-meta {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
-    margin: 10px 0 0;
+    margin: 8px 0 0;
     font-size: 13px;
   }
 
   .hero-meta dt {
     font-weight: 600;
-    color: #e5e7eb;
     margin-bottom: 4px;
   }
 
   .hero-meta dd {
     margin: 0;
-    color: #9ca3af;
+    color: #6b7280;
   }
 
-  .hero-highlight {
-    background: radial-gradient(circle at top left, #1d1b3f, #020617);
+  .hero-side {
+    background: #ffffff;
     border-radius: 18px;
-    padding: 18px 18px 16px;
-    border: 1px solid rgba(129, 140, 248, 0.6);
-    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
+    padding: 16px 16px 14px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 24px rgba(148, 163, 184, 0.25);
   }
 
-  .highlight-header {
-    display: flex;
+  .side-badge {
+    display: inline-flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #f5f3ff;
+    color: #4f46e5;
+    font-size: 12px;
     margin-bottom: 10px;
   }
 
-  .highlight-chip {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    padding: 3px 8px;
+  .badge-dot {
+    width: 8px;
+    height: 8px;
     border-radius: 999px;
-    background: rgba(15, 23, 42, 0.9);
-    border: 1px solid rgba(191, 219, 254, 0.5);
-    color: #bfdbfe;
+    background: #f97316;
+    display: inline-block;
   }
 
-  .highlight-label {
-    font-size: 12px;
-    color: #a5b4fc;
-  }
-
-  .highlight-list {
+  .side-list {
     list-style: none;
     padding: 0;
     margin: 0;
+    font-size: 13px;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    font-size: 13px;
   }
 
-  .highlight-list h3 {
+  .side-list h3 {
     margin: 0 0 4px;
-    font-size: 14px;
+    font-size: 15px;
   }
 
-  .highlight-list p {
+  .side-list p {
     margin: 0;
-    color: #e5e7eb;
-    line-height: 1.6;
+    color: #4b5563;
+    line-height: 1.7;
   }
 
   .section {
@@ -312,7 +311,7 @@ import Layout from "../layouts/Layout.astro";
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
   }
 
   .section-header h2 {
@@ -322,7 +321,7 @@ import Layout from "../layouts/Layout.astro";
 
   .section-more {
     font-size: 13px;
-    color: #a5b4fc;
+    color: #6366f1;
   }
 
   .section-more:hover {
@@ -336,26 +335,39 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .card {
-    background: rgba(15, 23, 42, 0.9);
+    background: var(--bg-card);
     border-radius: 18px;
     padding: 16px 16px 14px;
-    border: 1px solid rgba(148, 163, 184, 0.4);
-    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.85);
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-soft);
+    font-size: 13px;
     display: flex;
     flex-direction: column;
     gap: 8px;
-    font-size: 13px;
   }
 
   .card-tag {
     display: inline-flex;
     align-items: center;
-    padding: 2px 9px;
+    padding: 3px 9px;
     border-radius: 999px;
     font-size: 11px;
-    background: rgba(30, 64, 175, 0.45);
-    color: #dbeafe;
-    width: fit-content;
+    font-weight: 500;
+  }
+
+  .tag-purple {
+    background: #f5f3ff;
+    color: #4c1d95;
+  }
+
+  .tag-pink {
+    background: #fdf2f8;
+    color: #9d174d;
+  }
+
+  .tag-mint {
+    background: #ecfeff;
+    color: #115e59;
   }
 
   .card-title {
@@ -365,31 +377,32 @@ import Layout from "../layouts/Layout.astro";
 
   .card-body {
     margin: 0;
-    color: #9ca3af;
+    color: #6b7280;
     line-height: 1.7;
   }
 
   .card-meta {
     list-style: none;
+    padding: 0;
+    margin: 6px 0 0;
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
-    margin: 6px 0 0;
-    padding: 0;
   }
 
   .card-meta li {
     padding: 2px 8px;
     border-radius: 999px;
-    border: 1px solid rgba(148, 163, 184, 0.6);
+    border: 1px solid #e5e7eb;
     font-size: 11px;
-    color: #e5e7eb;
+    color: #4b5563;
+    background: #f9fafb;
   }
 
   .card-link {
     margin-top: 8px;
     font-size: 13px;
-    color: #a5b4fc;
+    color: #6366f1;
   }
 
   .card-link:hover {
@@ -404,10 +417,10 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .recent-item {
-    padding: 14px 16px;
+    background: #fefce8;
     border-radius: 16px;
-    border: 1px dashed rgba(148, 163, 184, 0.5);
-    background: rgba(15, 23, 42, 0.7);
+    padding: 14px 16px;
+    border: 1px solid #fde68a;
   }
 
   .recent-item h3 {
@@ -417,13 +430,13 @@ import Layout from "../layouts/Layout.astro";
 
   .recent-item p {
     margin: 0 0 6px;
-    color: #9ca3af;
-    line-height: 1.6;
+    color: #6b7280;
+    line-height: 1.7;
   }
 
   .recent-link {
     font-size: 12px;
-    color: #a5b4fc;
+    color: #b45309;
   }
 
   .recent-link:hover {
@@ -435,7 +448,7 @@ import Layout from "../layouts/Layout.astro";
       grid-template-columns: minmax(0, 1fr);
     }
 
-    .hero-highlight {
+    .hero-side {
       order: -1;
     }
 
@@ -462,3 +475,4 @@ import Layout from "../layouts/Layout.astro";
     }
   }
 </style>
+
